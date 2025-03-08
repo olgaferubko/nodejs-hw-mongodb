@@ -3,7 +3,7 @@ import pino from 'pino-http';
 import cors from 'cors';
 import 'dotenv/config';
 import { getEnvVar } from './utils/getEnvVar.js';
-import contactsRouter from './riuters/contacts.js';
+import contactsRouter from './rоuters/contacts.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 
