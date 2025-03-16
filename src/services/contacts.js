@@ -28,6 +28,14 @@ export const getAllContacts = async (
             .limit(perPage)
             .sort({ [sortBy]: sortOrder }),
     ]);
+
+
+    const paginationData = calculatePaginationData(contactsCount, page, perPage);
+
+    return {
+        data: contacts,
+        ...paginationData,
+    };
 };
 
 export const getContactById = async (id) => {
