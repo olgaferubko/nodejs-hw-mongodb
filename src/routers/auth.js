@@ -3,7 +3,7 @@ import { Router } from 'express';
 import { validateBody } from '../middlewares/validateBody.js';
 import { ctrlWrapper } from '../utils/ctrlWrapper.js';
 
-import { loginUsersSchema, registerUsersSchema } from '../validation/auth.js';
+import { loginUserSchema, registerUserSchema } from '../validation/auth.js';
 
 import {
     loginUserController,
@@ -16,13 +16,13 @@ const router = Router();
 
 router.post(
     '/register',
-    validateBody(registerUsersSchema),
+    validateBody(registerUserSchema),
     ctrlWrapper(registerUserController),
 );
 
 router.post(
     '/login',
-    validateBody(loginUsersSchema),
+    validateBody(loginUserSchema),
     ctrlWrapper(loginUserController),
 );
 
