@@ -66,7 +66,7 @@ export const logoutUserController = async (req, res) => {
     res.status(204).send();
 };
 
-export const requestEmailController = async (req, res) => {
+export const resetEmailController = async (req, res) => {
     await requestResetToken(req.body.email);
 
     res.json({
