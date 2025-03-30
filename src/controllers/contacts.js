@@ -67,7 +67,7 @@ export const postContactController = async (req, res) => {
         }
     }
 
-    const contact = await postContact(req.body, userId);
+    const contact = await postContact(data, userId);
 
     res.status(201).json({
         status: 201,
